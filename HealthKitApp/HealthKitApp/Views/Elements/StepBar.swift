@@ -25,13 +25,17 @@ struct StepBar: View {
         .foregroundColor(Color.white)
       
       let color: Color = step.count > 10000 ? .green : .red
+      let width: CGFloat = 20
       Rectangle()
         .fill(color)
-        .frame(width: 20, height: CGFloat(barHeight))
+        .frame(width: width, height: CGFloat(barHeight))
+        .mask(RoundedRectangle(cornerRadius: width/2, style: .continuous))
+        .shadow(radius: 10)
       
       Text("\(step.date,formatter: dateFormatter)")
         .font(.caption)
         .foregroundColor(Color.white)
+        .shadow(radius: 10)
     }
   }
 }
