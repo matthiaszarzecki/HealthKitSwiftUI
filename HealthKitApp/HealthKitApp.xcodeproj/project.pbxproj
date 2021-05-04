@@ -8,11 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		6E815D9D2641482000BBEBAF /* HealthKitAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815D9C2641482000BBEBAF /* HealthKitAppApp.swift */; };
-		6E815D9F2641482000BBEBAF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815D9E2641482000BBEBAF /* ContentView.swift */; };
+		6E815D9F2641482000BBEBAF /* AllStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815D9E2641482000BBEBAF /* AllStepsView.swift */; };
 		6E815DA12641482100BBEBAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E815DA02641482100BBEBAF /* Assets.xcassets */; };
 		6E815DA42641482100BBEBAF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E815DA32641482100BBEBAF /* Preview Assets.xcassets */; };
 		6E815DAF2641482100BBEBAF /* HealthKitAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815DAE2641482100BBEBAF /* HealthKitAppTests.swift */; };
 		6E815DBA2641482100BBEBAF /* HealthKitAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815DB92641482100BBEBAF /* HealthKitAppUITests.swift */; };
+		6E815DC826414ACB00BBEBAF /* HealthStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815DC726414ACB00BBEBAF /* HealthStore.swift */; };
+		6E815DCA26414B0F00BBEBAF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815DC926414B0F00BBEBAF /* GraphView.swift */; };
+		6E815DCE26414BE200BBEBAF /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E815DCD26414BE200BBEBAF /* HealthKit.framework */; };
+		6E815DD22641601500BBEBAF /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815DD12641601500BBEBAF /* Date-Extension.swift */; };
+		6E815DD72641607B00BBEBAF /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815DD62641607B00BBEBAF /* Step.swift */; };
+		6E815DDA2641650D00BBEBAF /* MockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815DD92641650D00BBEBAF /* MockClasses.swift */; };
+		6E815DDD2641657500BBEBAF /* StepBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815DDC2641657500BBEBAF /* StepBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +42,7 @@
 /* Begin PBXFileReference section */
 		6E815D992641482000BBEBAF /* HealthKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E815D9C2641482000BBEBAF /* HealthKitAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAppApp.swift; sourceTree = "<group>"; };
-		6E815D9E2641482000BBEBAF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		6E815D9E2641482000BBEBAF /* AllStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStepsView.swift; sourceTree = "<group>"; };
 		6E815DA02641482100BBEBAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E815DA32641482100BBEBAF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6E815DA52641482100BBEBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +52,14 @@
 		6E815DB52641482100BBEBAF /* HealthKitAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthKitAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E815DB92641482100BBEBAF /* HealthKitAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAppUITests.swift; sourceTree = "<group>"; };
 		6E815DBB2641482100BBEBAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E815DC726414ACB00BBEBAF /* HealthStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthStore.swift; sourceTree = "<group>"; };
+		6E815DC926414B0F00BBEBAF /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		6E815DCB26414BE200BBEBAF /* HealthKitApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthKitApp.entitlements; sourceTree = "<group>"; };
+		6E815DCD26414BE200BBEBAF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		6E815DD12641601500BBEBAF /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
+		6E815DD62641607B00BBEBAF /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
+		6E815DD92641650D00BBEBAF /* MockClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClasses.swift; sourceTree = "<group>"; };
+		6E815DDC2641657500BBEBAF /* StepBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E815DCE26414BE200BBEBAF /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +95,7 @@
 				6E815DAD2641482100BBEBAF /* HealthKitAppTests */,
 				6E815DB82641482100BBEBAF /* HealthKitAppUITests */,
 				6E815D9A2641482000BBEBAF /* Products */,
+				6E815DCC26414BE200BBEBAF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +112,16 @@
 		6E815D9B2641482000BBEBAF /* HealthKitApp */ = {
 			isa = PBXGroup;
 			children = (
-				6E815D9C2641482000BBEBAF /* HealthKitAppApp.swift */,
-				6E815D9E2641482000BBEBAF /* ContentView.swift */,
-				6E815DA02641482100BBEBAF /* Assets.xcassets */,
+				6E815DCB26414BE200BBEBAF /* HealthKitApp.entitlements */,
 				6E815DA52641482100BBEBAF /* Info.plist */,
+				6E815DCF26415F2400BBEBAF /* AppDelegate */,
+				6E815DD32641604100BBEBAF /* Extensions */,
+				6E815DD42641605000BBEBAF /* HealthKit */,
+				6E815DDB2641653500BBEBAF /* MockClasses */,
+				6E815DD82641609000BBEBAF /* Models */,
 				6E815DA22641482100BBEBAF /* Preview Content */,
+				6E815DD52641605F00BBEBAF /* SupportingFiles */,
+				6E815DD026415FB300BBEBAF /* Views */,
 			);
 			path = HealthKitApp;
 			sourceTree = "<group>";
@@ -128,6 +150,72 @@
 				6E815DBB2641482100BBEBAF /* Info.plist */,
 			);
 			path = HealthKitAppUITests;
+			sourceTree = "<group>";
+		};
+		6E815DCC26414BE200BBEBAF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E815DCD26414BE200BBEBAF /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6E815DCF26415F2400BBEBAF /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6E815D9C2641482000BBEBAF /* HealthKitAppApp.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6E815DD026415FB300BBEBAF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6E815D9E2641482000BBEBAF /* AllStepsView.swift */,
+				6E815DC926414B0F00BBEBAF /* GraphView.swift */,
+				6E815DDC2641657500BBEBAF /* StepBar.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		6E815DD32641604100BBEBAF /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6E815DD12641601500BBEBAF /* Date-Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6E815DD42641605000BBEBAF /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				6E815DC726414ACB00BBEBAF /* HealthStore.swift */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		6E815DD52641605F00BBEBAF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				6E815DA02641482100BBEBAF /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		6E815DD82641609000BBEBAF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6E815DD62641607B00BBEBAF /* Step.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6E815DDB2641653500BBEBAF /* MockClasses */ = {
+			isa = PBXGroup;
+			children = (
+				6E815DD92641650D00BBEBAF /* MockClasses.swift */,
+			);
+			path = MockClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +347,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E815D9F2641482000BBEBAF /* ContentView.swift in Sources */,
+				6E815D9F2641482000BBEBAF /* AllStepsView.swift in Sources */,
+				6E815DDD2641657500BBEBAF /* StepBar.swift in Sources */,
+				6E815DC826414ACB00BBEBAF /* HealthStore.swift in Sources */,
 				6E815D9D2641482000BBEBAF /* HealthKitAppApp.swift in Sources */,
+				6E815DD22641601500BBEBAF /* Date-Extension.swift in Sources */,
+				6E815DCA26414B0F00BBEBAF /* GraphView.swift in Sources */,
+				6E815DDA2641650D00BBEBAF /* MockClasses.swift in Sources */,
+				6E815DD72641607B00BBEBAF /* Step.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthKitApp/HealthKitApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthKitApp/Preview Content\"";
 				DEVELOPMENT_TEAM = QDUTEX33CU;
@@ -439,6 +534,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = HealthKitApp/HealthKitApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"HealthKitApp/Preview Content\"";
 				DEVELOPMENT_TEAM = QDUTEX33CU;
