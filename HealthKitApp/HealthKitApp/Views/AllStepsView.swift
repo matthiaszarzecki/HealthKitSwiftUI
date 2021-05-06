@@ -14,16 +14,14 @@ struct AllStepsView: View {
   
   init() {
     healthStore = HealthStore()
+    //loadData()
   }
   
   var body: some View {
-    NavigationView {
-      GraphView(steps: steps)
-        .navigationTitle("Your Current Steps")
-    }
-    .onAppear {
-      loadData()
-    }
+    AllStepsDisplay(steps: steps)
+      .onAppear {
+        loadData()
+      }
   }
   
   private func loadData() {
@@ -75,8 +73,19 @@ struct AllStepsView: View {
   }
 }
 
+struct AllStepsDisplay: View {
+  var steps: [Step]
+  
+  var body: some View {
+    NavigationView {
+      GraphView(steps: steps)
+        .navigationTitle("Your Current Steps")
+    }
+  }
+}
+
 struct AllStepsView_Previews: PreviewProvider {
   static var previews: some View {
-    AllStepsView()
+    AllStepsDisplay(steps: MockClasses.steps)
   }
 }
