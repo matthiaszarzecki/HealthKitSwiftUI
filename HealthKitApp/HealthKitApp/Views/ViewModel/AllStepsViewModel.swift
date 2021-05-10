@@ -17,7 +17,7 @@ class AllStepsViewModel: ObservableObject {
     loadData()
   }
   
-  private func loadData() {
+  func loadData() {
     // Create custom HealthStore
     if let healthStore = healthStore {
       
@@ -31,6 +31,10 @@ class AllStepsViewModel: ObservableObject {
           // Get actual data we want to display.
           healthStore.calculateSteps { statisticsCollection in
             if let statisticsCollection = statisticsCollection {
+              
+              // Reset steps here for later fresh appending
+              self.state.steps = [Step]()
+              
               self.updateUIFromStatistics(
                 statisticsCollection: statisticsCollection
               )

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E815B37264977C1004DA642 /* View-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815B36264977C1004DA642 /* View-Extension.swift */; };
+		6E815B39264977EC004DA642 /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815B38264977EC004DA642 /* Color-Extension.swift */; };
 		6E815D9D2641482000BBEBAF /* HealthKitAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815D9C2641482000BBEBAF /* HealthKitAppApp.swift */; };
 		6E815D9F2641482000BBEBAF /* AllStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815D9E2641482000BBEBAF /* AllStepsView.swift */; };
 		6E815DA12641482100BBEBAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E815DA02641482100BBEBAF /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E815B36264977C1004DA642 /* View-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-Extension.swift"; sourceTree = "<group>"; };
+		6E815B38264977EC004DA642 /* Color-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extension.swift"; sourceTree = "<group>"; };
 		6E815D992641482000BBEBAF /* HealthKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E815D9C2641482000BBEBAF /* HealthKitAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitAppApp.swift; sourceTree = "<group>"; };
 		6E815D9E2641482000BBEBAF /* AllStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStepsView.swift; sourceTree = "<group>"; };
@@ -181,7 +185,9 @@
 		6E815DD32641604100BBEBAF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6E815B38264977EC004DA642 /* Color-Extension.swift */,
 				6E815DD12641601500BBEBAF /* Date-Extension.swift */,
+				6E815B36264977C1004DA642 /* View-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,8 +372,10 @@
 				6E815D9F2641482000BBEBAF /* AllStepsView.swift in Sources */,
 				6E815DDD2641657500BBEBAF /* StepBar.swift in Sources */,
 				6E815DC826414ACB00BBEBAF /* HealthStore.swift in Sources */,
+				6E815B39264977EC004DA642 /* Color-Extension.swift in Sources */,
 				6E815D9D2641482000BBEBAF /* HealthKitAppApp.swift in Sources */,
 				6E815DD22641601500BBEBAF /* Date-Extension.swift in Sources */,
+				6E815B37264977C1004DA642 /* View-Extension.swift in Sources */,
 				6E815DDA2641650D00BBEBAF /* MockClasses.swift in Sources */,
 				6E88605E26440CB300625B06 /* AllStepsViewModel.swift in Sources */,
 				6E815DD72641607B00BBEBAF /* Step.swift in Sources */,
