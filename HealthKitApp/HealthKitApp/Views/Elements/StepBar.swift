@@ -22,7 +22,7 @@ struct StepBar: View {
     let barHeight = Swift.min(step.count/40, 300)
     
     VStack {
-      Text("\(step.count)")
+      Text(verbatim: "\(step.count)")
         .font(.caption)
         .foregroundColor(Color.white)
       
