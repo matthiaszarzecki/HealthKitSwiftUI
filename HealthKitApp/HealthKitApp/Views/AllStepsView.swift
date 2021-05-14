@@ -22,7 +22,8 @@ struct AllStepsDisplay: View {
   var steps: [Step]
   var refreshStepReadout: () -> Void
   
-  @State private var dailyGoal = 7000
+  @AppStorage("daily_goal") private var savedGoal: Int = 7000
+  @State private var dailyGoal = 0
   
   var body: some View {
     GeometryReader { geometry in
@@ -44,11 +45,15 @@ struct AllStepsDisplay: View {
           )
           DailyGoalDisplay(
             dailyGoal: $dailyGoal,
-            width: geometry.size.width - 16*2
+            width: geometry.size.width - 16*2,
+            saveGoal: saveGoal
           )
         }
         .navigationTitle("Your Current Steps")
       }
+    }
+    .onAppear {
+      dailyGoal = savedGoal
     }
     .onReceive(
       NotificationCenter.default.publisher(
@@ -57,6 +62,10 @@ struct AllStepsDisplay: View {
       print("### Checking for update after putting app into foreground")
       refreshStepReadout()
     }
+  }
+  
+  func saveGoal(amount: Int) {
+    savedGoal = amount
   }
 }
 

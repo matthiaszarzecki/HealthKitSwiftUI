@@ -10,6 +10,7 @@ import SwiftUI
 struct DailyGoalDisplay: View {
   @Binding var dailyGoal: Int
   let width: CGFloat
+  var saveGoal: (Int) -> Void
   
   var body: some View {
     HStack {
@@ -59,6 +60,7 @@ struct DailyGoalDisplay: View {
         dailyGoal = 0
       }
     }
+    saveGoal(dailyGoal)
   }
 }
 
@@ -66,7 +68,8 @@ struct DailyGoalDisplay_Previews: PreviewProvider {
   static var previews: some View {
     DailyGoalDisplay(
       dailyGoal: .constant(MockClasses.dailyGoal),
-      width: PreviewConstants.width
+      width: PreviewConstants.width,
+      saveGoal: {_ in }
     )
     .padding()
     .previewLayout(.sizeThatFits)
