@@ -49,10 +49,11 @@ class AllStepsViewModel: ObservableObject {
     statisticsCollection: HKStatisticsCollection
   ) {
     // Get dates we want to display. The display should
-    // begin 7 days ago, and end on the current day.
+    // begin 6 days ago (0 indexed for 1 week total),
+    // and end on the current day.
     let startDate = Calendar.current.date(
       byAdding: .day,
-      value: -7, to: Date()
+      value: -6, to: Date()
     )!
     let endDate = Date()
     

@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct StepsDisplay: View {
-  var steps: [Step]
-  var width: CGFloat
+  let steps: [Step]
+  let dailyGoal: Int
+  let width: CGFloat
   
   var body: some View {
     HStack(alignment: .lastTextBaseline) {
       ForEach(steps, id: \.id) { step in
-        StepBar(step: step)
+        StepBar(step: step, dailyGoal: dailyGoal)
       }
     }
     .frame(width: width, height: 400)
@@ -27,6 +28,7 @@ struct StepsDisplay_Previews: PreviewProvider {
   static var previews: some View {
     StepsDisplay(
       steps: MockClasses.steps,
+      dailyGoal: MockClasses.dailyGoal,
       width: PreviewConstants.width
     )
     .padding()

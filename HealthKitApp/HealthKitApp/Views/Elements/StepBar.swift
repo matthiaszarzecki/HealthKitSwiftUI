@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct StepBar: View {
-  var step: Step
-  
-  private let dailyGoal = 7000
+  let step: Step
+  let dailyGoal: Int
   
   private let dateFormatter: DateFormatter = {
     let formatter = DateFormatter()
@@ -52,14 +51,20 @@ struct StepBar: View {
 
 struct StepBar_Previews: PreviewProvider {
   static var previews: some View {
-    StepBar(step: MockClasses.stepLessThan10000Steps)
-      .padding()
-      .backgroundColor(.dailyStepsBlue)
-      .previewLayout(.sizeThatFits)
+    StepBar(
+      step: MockClasses.stepLessThan10000Steps,
+      dailyGoal: MockClasses.dailyGoal
+    )
+    .padding()
+    .backgroundColor(.dailyStepsBlue)
+    .previewLayout(.sizeThatFits)
     
-    StepBar(step: MockClasses.stepMoreThan10000Steps)
-      .padding()
-      .backgroundColor(.dailyStepsBlue)
-      .previewLayout(.sizeThatFits)
+    StepBar(
+      step: MockClasses.stepMoreThan10000Steps,
+      dailyGoal: MockClasses.dailyGoal
+    )
+    .padding()
+    .backgroundColor(.dailyStepsBlue)
+    .previewLayout(.sizeThatFits)
   }
 }

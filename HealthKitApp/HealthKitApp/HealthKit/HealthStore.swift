@@ -29,7 +29,7 @@ class HealthStore {
     
     let startDate = Calendar.current.date(
       byAdding: .day,
-      value: -7,
+      value: -6,
       to: Date()
     )
     let anchorDate = Date.mondayAt12AM()

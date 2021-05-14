@@ -22,12 +22,20 @@ struct AllStepsDisplay: View {
   var steps: [Step]
   var refreshStepReadout: () -> Void
   
+  @State private var dailyGoal = 7000
+  
   var body: some View {
     GeometryReader { geometry in
       NavigationView {
         VStack {
+          DailyStepsDisplay(
+            stepAmount: steps.last?.count ?? 0,
+            dailyGoal: 7000,
+            width: geometry.size.width - 16*2
+          )
           StepsDisplay(
             steps: steps,
+            dailyGoal: dailyGoal,
             width: geometry.size.width - 16*2
           )
           TotalStepsDisplay(
