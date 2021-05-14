@@ -13,7 +13,7 @@ struct DailyStepsDisplay: View {
   let width: CGFloat
   
   var body: some View {
-    Text(verbatim: "Steps Today: \(stepAmount) / \(dailyGoal)")
+    Text(verbatim: "Today: \(stepAmount) / \(dailyGoal)")
       .padding()
       .frame(width: width, height: 56)
       .foregroundColor(.white)

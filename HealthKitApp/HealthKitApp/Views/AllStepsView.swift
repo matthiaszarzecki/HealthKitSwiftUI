@@ -30,7 +30,7 @@ struct AllStepsDisplay: View {
         VStack {
           DailyStepsDisplay(
             stepAmount: steps.last?.count ?? 0,
-            dailyGoal: 7000,
+            dailyGoal: dailyGoal,
             width: geometry.size.width - 16*2
           )
           StepsDisplay(
@@ -40,6 +40,10 @@ struct AllStepsDisplay: View {
           )
           TotalStepsDisplay(
             steps: steps,
+            width: geometry.size.width - 16*2
+          )
+          DailyGoalDisplay(
+            dailyGoal: $dailyGoal,
             width: geometry.size.width - 16*2
           )
         }

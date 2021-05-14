@@ -16,7 +16,7 @@ struct TotalStepsDisplay: View {
   }
   
   var body: some View {
-    Text(verbatim: "Steps Last 7 Days: \(totalSteps)")
+    Text(verbatim: "Last 7 Days: \(totalSteps)")
       .padding()
       .frame(width: width, height: 56)
       .foregroundColor(.white)
