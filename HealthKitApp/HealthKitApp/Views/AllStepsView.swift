@@ -22,28 +22,21 @@ struct AllStepsDisplay: View {
   var steps: [Step]
   var refreshStepReadout: () -> Void
   
-  private var totalSteps: Int {
-    steps.map { $0.count }.reduce(0, +)
-  }
-  
   var body: some View {
-    NavigationView {
-      VStack {
-        HStack(alignment: .lastTextBaseline) {
-          ForEach(steps, id: \.id) { step in
-            StepBar(step: step)
-          }
+    GeometryReader { geometry in
+      NavigationView {
+        VStack {
+          StepsDisplay(
+            steps: steps,
+            width: geometry.size.width - 16*2
+          )
+          TotalStepsDisplay(
+            steps: steps,
+            width: geometry.size.width - 16*2
+          )
         }
-        
-        Text("Total Steps: \(totalSteps)")
-          .padding(.top, 100)
-          .foregroundColor(.white)
+        .navigationTitle("Your Current Steps")
       }
-      .frame(maxWidth: .infinity, maxHeight: .infinity)
-      .backgroundColor(.dailyStepsBlue)
-      .mask(RoundedRectangle(cornerRadius: 36, style: .continuous))
-      .padding()
-      .navigationTitle("Your Current Steps")
     }
     .onReceive(
       NotificationCenter.default.publisher(
