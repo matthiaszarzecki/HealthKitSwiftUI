@@ -13,6 +13,10 @@ struct DailyGoalDisplay: View {
   
   var body: some View {
     HStack {
+      Text(verbatim: "Daily Goal")
+        .padding()
+        .foregroundColor(.white)
+      
       Button(
         action: {
           adaptDailyGoal(amount: -500)
@@ -64,5 +68,7 @@ struct DailyGoalDisplay_Previews: PreviewProvider {
       dailyGoal: .constant(MockClasses.dailyGoal),
       width: PreviewConstants.width
     )
+    .padding()
+    .previewLayout(.sizeThatFits)
   }
 }

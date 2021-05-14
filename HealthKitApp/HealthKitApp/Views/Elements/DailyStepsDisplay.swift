@@ -13,12 +13,21 @@ struct DailyStepsDisplay: View {
   let width: CGFloat
   
   var body: some View {
-    Text(verbatim: "Today: \(stepAmount) / \(dailyGoal)")
-      .padding()
-      .frame(width: width, height: 56)
-      .foregroundColor(.white)
-      .backgroundColor(.dailyStepsBlue)
-      .mask(RoundedRectangle(cornerRadius: 36, style: .continuous))
+    HStack {
+      let progress = Double(stepAmount) / Double(dailyGoal)
+      CircularProgressBar(
+        progress: progress,
+        size: 100
+      )
+      
+      Text(verbatim: "\(stepAmount) / \(dailyGoal)")
+        .font(.title)
+        .padding()
+        .foregroundColor(.white)
+    }
+    .frame(width: width, height: 100)
+    .backgroundColor(.dailyStepsBlue)
+    .mask(RoundedRectangle(cornerRadius: 36, style: .continuous))
   }
 }
 
@@ -29,5 +38,7 @@ struct DailyStepsDisplay_Previews: PreviewProvider {
       dailyGoal: MockClasses.dailyGoal,
       width: PreviewConstants.width
     )
+    .padding()
+    .previewLayout(.sizeThatFits)
   }
 }
