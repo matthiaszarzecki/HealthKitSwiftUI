@@ -13,7 +13,9 @@ struct AllStepsView: View {
   var body: some View {
     AllStepsDisplay(
       steps: allStepsViewModel.state.steps,
-      refreshStepReadout: allStepsViewModel.loadData
+      refreshStepReadout: allStepsViewModel.loadData,
+      saveGoal: allStepsViewModel.saveGoal,
+      dailyGoal: allStepsViewModel.state.dailyGoal
     )
   }
 }
@@ -21,9 +23,8 @@ struct AllStepsView: View {
 struct AllStepsDisplay: View {
   var steps: [Step]
   var refreshStepReadout: () -> Void
-  
-  @AppStorage("daily_goal") private var savedGoal: Int = 7000
-  @State private var dailyGoal = 0
+  var saveGoal: (Int) -> Void
+  var dailyGoal: Int
   
   var body: some View {
     GeometryReader { geometry in
@@ -44,16 +45,13 @@ struct AllStepsDisplay: View {
             width: geometry.size.width - 16*2
           )
           DailyGoalDisplay(
-            dailyGoal: $dailyGoal,
+            dailyGoal: dailyGoal,
             width: geometry.size.width - 16*2,
             saveGoal: saveGoal
           )
         }
         .navigationTitle("Your Current Steps")
       }
-    }
-    .onAppear {
-      dailyGoal = savedGoal
     }
     .onReceive(
       NotificationCenter.default.publisher(
@@ -63,17 +61,15 @@ struct AllStepsDisplay: View {
       refreshStepReadout()
     }
   }
-  
-  func saveGoal(amount: Int) {
-    savedGoal = amount
-  }
 }
 
 struct AllStepsView_Previews: PreviewProvider {
   static var previews: some View {
     AllStepsDisplay(
       steps: MockClasses.steps,
-      refreshStepReadout: {}
+      refreshStepReadout: {},
+      saveGoal: {_ in },
+      dailyGoal: MockClasses.dailyGoal
     )
   }
 }

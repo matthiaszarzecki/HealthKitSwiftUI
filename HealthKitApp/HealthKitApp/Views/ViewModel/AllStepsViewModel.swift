@@ -7,14 +7,23 @@
 
 import Foundation
 import HealthKit
+import SwiftUI
 
 class AllStepsViewModel: ObservableObject {
   @Published private(set) var state = AllStepsViewState()
   private var healthStore: HealthStore?
   
+  @AppStorage("daily_goal") private var savedGoal: Int = 7000
+  
   init() {
     healthStore = HealthStore()
     loadData()
+    state.dailyGoal = savedGoal
+  }
+  
+  func saveGoal(amount: Int) {
+    state.dailyGoal = amount
+    savedGoal = state.dailyGoal
   }
   
   func loadData() {
@@ -72,5 +81,6 @@ class AllStepsViewModel: ObservableObject {
   
   struct AllStepsViewState {
     var steps = [Step]()
+    var dailyGoal = 0
   }
 }

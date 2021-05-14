@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DailyGoalDisplay: View {
-  @Binding var dailyGoal: Int
+  var dailyGoal: Int
   let width: CGFloat
   var saveGoal: (Int) -> Void
   
@@ -54,20 +54,20 @@ struct DailyGoalDisplay: View {
   }
   
   func adaptDailyGoal(amount: Int) {
-    withAnimation {
-      dailyGoal += amount
-      if dailyGoal < 0 {
-        dailyGoal = 0
-      }
+    var newGoal = dailyGoal + amount
+    if newGoal < 0 {
+      newGoal = 0
     }
-    saveGoal(dailyGoal)
+    withAnimation {
+      saveGoal(newGoal)
+    }
   }
 }
 
 struct DailyGoalDisplay_Previews: PreviewProvider {
   static var previews: some View {
     DailyGoalDisplay(
-      dailyGoal: .constant(MockClasses.dailyGoal),
+      dailyGoal: MockClasses.dailyGoal,
       width: PreviewConstants.width,
       saveGoal: {_ in }
     )
