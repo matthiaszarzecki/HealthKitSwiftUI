@@ -28,8 +28,8 @@ struct TotalStepsDisplay: View {
 struct TotalStepsDisplay_Previews: PreviewProvider {
   static var previews: some View {
     TotalStepsDisplay(
-      steps: MockClasses.steps,
-      width: PreviewConstants.width
+      steps: .mockSteps,
+      width: .previewWidth
     )
     .padding()
     .previewLayout(.sizeThatFits)

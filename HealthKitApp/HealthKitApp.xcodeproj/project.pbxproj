@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E3E7ED42C7081C000E5F12B /* Int-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E7ED32C7081C000E5F12B /* Int-Extension.swift */; };
+		6E3E7ED62C7081D900E5F12B /* CGFloat-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E3E7ED52C7081D900E5F12B /* CGFloat-Extension.swift */; };
 		6E815B37264977C1004DA642 /* View-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815B36264977C1004DA642 /* View-Extension.swift */; };
 		6E815B39264977EC004DA642 /* Color-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815B38264977EC004DA642 /* Color-Extension.swift */; };
-		6E815B3A26497C7A004DA642 /* MockClasses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815DD92641650D00BBEBAF /* MockClasses.swift */; };
 		6E815D9D2641482000BBEBAF /* HealthKitAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815D9C2641482000BBEBAF /* HealthKitAppApp.swift */; };
 		6E815D9F2641482000BBEBAF /* AllStepsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E815D9E2641482000BBEBAF /* AllStepsView.swift */; };
 		6E815DA12641482100BBEBAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E815DA02641482100BBEBAF /* Assets.xcassets */; };
@@ -24,7 +25,6 @@
 		6E88605E26440CB300625B06 /* AllStepsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E88605D26440CB300625B06 /* AllStepsViewModel.swift */; };
 		6E937C7D264A849900B3954F /* TotalStepsDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E937C7C264A849900B3954F /* TotalStepsDisplay.swift */; };
 		6E937C7F264A970800B3954F /* StepsDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E937C7E264A970800B3954F /* StepsDisplay.swift */; };
-		6E937C81264A986000B3954F /* PreviewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E937C80264A986000B3954F /* PreviewConstants.swift */; };
 		6EAC059D264EE7F70081CB07 /* DailyStepsDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC059C264EE7F70081CB07 /* DailyStepsDisplay.swift */; };
 		6EAC059F264EEDF00081CB07 /* DailyGoalDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC059E264EEDF00081CB07 /* DailyGoalDisplay.swift */; };
 		6EAC05A1264EEF2D0081CB07 /* CircularProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAC05A0264EEF2D0081CB07 /* CircularProgressBar.swift */; };
@@ -48,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E3E7ED32C7081C000E5F12B /* Int-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int-Extension.swift"; sourceTree = "<group>"; };
+		6E3E7ED52C7081D900E5F12B /* CGFloat-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat-Extension.swift"; sourceTree = "<group>"; };
 		6E815B36264977C1004DA642 /* View-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View-Extension.swift"; sourceTree = "<group>"; };
 		6E815B38264977EC004DA642 /* Color-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Extension.swift"; sourceTree = "<group>"; };
 		6E815D992641482000BBEBAF /* HealthKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,12 +69,10 @@
 		6E815DCD26414BE200BBEBAF /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		6E815DD12641601500BBEBAF /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
 		6E815DD62641607B00BBEBAF /* Step.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
-		6E815DD92641650D00BBEBAF /* MockClasses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockClasses.swift; sourceTree = "<group>"; };
 		6E815DDC2641657500BBEBAF /* StepBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepBar.swift; sourceTree = "<group>"; };
 		6E88605D26440CB300625B06 /* AllStepsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllStepsViewModel.swift; sourceTree = "<group>"; };
 		6E937C7C264A849900B3954F /* TotalStepsDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalStepsDisplay.swift; sourceTree = "<group>"; };
 		6E937C7E264A970800B3954F /* StepsDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsDisplay.swift; sourceTree = "<group>"; };
-		6E937C80264A986000B3954F /* PreviewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewConstants.swift; sourceTree = "<group>"; };
 		6EAC059C264EE7F70081CB07 /* DailyStepsDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyStepsDisplay.swift; sourceTree = "<group>"; };
 		6EAC059E264EEDF00081CB07 /* DailyGoalDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalDisplay.swift; sourceTree = "<group>"; };
 		6EAC05A0264EEF2D0081CB07 /* CircularProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBar.swift; sourceTree = "<group>"; };
@@ -144,8 +144,6 @@
 		6E815DA22641482100BBEBAF /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				6E815DD92641650D00BBEBAF /* MockClasses.swift */,
-				6E937C80264A986000B3954F /* PreviewConstants.swift */,
 				6E815DA32641482100BBEBAF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -198,8 +196,10 @@
 		6E815DD32641604100BBEBAF /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				6E3E7ED52C7081D900E5F12B /* CGFloat-Extension.swift */,
 				6E815B38264977EC004DA642 /* Color-Extension.swift */,
 				6E815DD12641601500BBEBAF /* Date-Extension.swift */,
+				6E3E7ED32C7081C000E5F12B /* Int-Extension.swift */,
 				6E815B36264977C1004DA642 /* View-Extension.swift */,
 			);
 			path = Extensions;
@@ -379,7 +379,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E937C81264A986000B3954F /* PreviewConstants.swift in Sources */,
 				6E815D9F2641482000BBEBAF /* AllStepsView.swift in Sources */,
 				6E815DDD2641657500BBEBAF /* StepBar.swift in Sources */,
 				6EAC05A1264EEF2D0081CB07 /* CircularProgressBar.swift in Sources */,
@@ -387,11 +386,12 @@
 				6EAC059F264EEDF00081CB07 /* DailyGoalDisplay.swift in Sources */,
 				6E815B39264977EC004DA642 /* Color-Extension.swift in Sources */,
 				6E815D9D2641482000BBEBAF /* HealthKitAppApp.swift in Sources */,
+				6E3E7ED42C7081C000E5F12B /* Int-Extension.swift in Sources */,
 				6E815DD22641601500BBEBAF /* Date-Extension.swift in Sources */,
-				6E815B3A26497C7A004DA642 /* MockClasses.swift in Sources */,
 				6E815B37264977C1004DA642 /* View-Extension.swift in Sources */,
 				6E88605E26440CB300625B06 /* AllStepsViewModel.swift in Sources */,
 				6E937C7D264A849900B3954F /* TotalStepsDisplay.swift in Sources */,
+				6E3E7ED62C7081D900E5F12B /* CGFloat-Extension.swift in Sources */,
 				6E937C7F264A970800B3954F /* StepsDisplay.swift in Sources */,
 				6EAC059D264EE7F70081CB07 /* DailyStepsDisplay.swift in Sources */,
 				6E815DD72641607B00BBEBAF /* Step.swift in Sources */,

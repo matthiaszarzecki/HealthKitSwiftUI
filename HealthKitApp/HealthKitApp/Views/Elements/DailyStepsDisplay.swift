@@ -34,9 +34,9 @@ struct DailyStepsDisplay: View {
 struct DailyStepsDisplay_Previews: PreviewProvider {
   static var previews: some View {
     DailyStepsDisplay(
-      stepAmount: MockClasses.stepAmount7000,
-      dailyGoal: MockClasses.dailyGoal,
-      width: PreviewConstants.width
+      stepAmount: .mockStepAmount7000,
+      dailyGoal: .mockDailyGoal,
+      width: .previewWidth
     )
     .padding()
     .previewLayout(.sizeThatFits)

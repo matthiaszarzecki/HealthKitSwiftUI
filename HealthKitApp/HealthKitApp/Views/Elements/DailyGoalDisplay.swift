@@ -67,8 +67,8 @@ struct DailyGoalDisplay: View {
 struct DailyGoalDisplay_Previews: PreviewProvider {
   static var previews: some View {
     DailyGoalDisplay(
-      dailyGoal: MockClasses.dailyGoal,
-      width: PreviewConstants.width,
+      dailyGoal: .mockDailyGoal,
+      width: .previewWidth,
       saveGoal: {_ in }
     )
     .padding()

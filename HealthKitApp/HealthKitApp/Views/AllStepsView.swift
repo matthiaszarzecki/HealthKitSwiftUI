@@ -66,10 +66,10 @@ struct AllStepsDisplay: View {
 struct AllStepsView_Previews: PreviewProvider {
   static var previews: some View {
     AllStepsDisplay(
-      steps: MockClasses.steps,
+      steps: .mockSteps,
       refreshStepReadout: {},
       saveGoal: {_ in },
-      dailyGoal: MockClasses.dailyGoal
+      dailyGoal: .mockDailyGoal
     )
   }
 }

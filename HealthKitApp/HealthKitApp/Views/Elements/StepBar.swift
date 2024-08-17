@@ -52,16 +52,16 @@ struct StepBar: View {
 struct StepBar_Previews: PreviewProvider {
   static var previews: some View {
     StepBar(
-      step: MockClasses.stepLessThan10000Steps,
-      dailyGoal: MockClasses.dailyGoal
+      step: .mockStepLessThan10000Steps,
+      dailyGoal: .mockDailyGoal
     )
     .padding()
     .backgroundColor(.dailyStepsBlue)
     .previewLayout(.sizeThatFits)
     
     StepBar(
-      step: MockClasses.stepMoreThan10000Steps,
-      dailyGoal: MockClasses.dailyGoal
+      step: .mockStepMoreThan10000Steps,
+      dailyGoal: .mockDailyGoal
     )
     .padding()
     .backgroundColor(.dailyStepsBlue)
