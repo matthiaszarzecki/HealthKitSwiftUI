@@ -31,14 +31,11 @@ struct DailyStepsDisplay: View {
   }
 }
 
-struct DailyStepsDisplay_Previews: PreviewProvider {
-  static var previews: some View {
-    DailyStepsDisplay(
-      stepAmount: .mockStepAmount7000,
-      dailyGoal: .mockDailyGoal,
-      width: .previewWidth
-    )
-    .padding()
-    .previewLayout(.sizeThatFits)
-  }
+#Preview(traits: .sizeThatFitsLayout) {
+  DailyStepsDisplay(
+    stepAmount: .mockStepAmount7000,
+    dailyGoal: .mockDailyGoal,
+    width: .previewWidth
+  )
+  .padding()
 }
