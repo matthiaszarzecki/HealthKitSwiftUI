@@ -64,14 +64,11 @@ struct DailyGoalDisplay: View {
   }
 }
 
-struct DailyGoalDisplay_Previews: PreviewProvider {
-  static var previews: some View {
-    DailyGoalDisplay(
-      dailyGoal: .mockDailyGoal,
-      width: .previewWidth,
-      saveGoal: {_ in }
-    )
-    .padding()
-    .previewLayout(.sizeThatFits)
-  }
+#Preview(traits: .sizeThatFitsLayout) {
+  DailyGoalDisplay(
+    dailyGoal: .mockDailyGoal,
+    width: .previewWidth,
+    saveGoal: {_ in }
+  )
+  .padding()
 }

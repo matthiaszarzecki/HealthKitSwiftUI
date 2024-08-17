@@ -32,8 +32,8 @@ struct StepBar: View {
         .fill(color)
         .frame(width: width, height: CGFloat(barHeight))
         .mask(RoundedRectangle(cornerRadius: width/2, style: .continuous))
-        .shadow(radius: 10)
-      
+        .shadow(radius: 8)
+
       if Calendar(identifier: .iso8601).isDateInToday(step.date) {
         Text("Today")
           .font(.caption)
@@ -49,22 +49,20 @@ struct StepBar: View {
   }
 }
 
-struct StepBar_Previews: PreviewProvider {
-  static var previews: some View {
-    StepBar(
-      step: .mockStepLessThan10000Steps,
-      dailyGoal: .mockDailyGoal
-    )
-    .padding()
-    .backgroundColor(.dailyStepsBlue)
-    .previewLayout(.sizeThatFits)
-    
-    StepBar(
-      step: .mockStepMoreThan10000Steps,
-      dailyGoal: .mockDailyGoal
-    )
-    .padding()
-    .backgroundColor(.dailyStepsBlue)
-    .previewLayout(.sizeThatFits)
-  }
+#Preview(traits: .sizeThatFitsLayout) {
+  StepBar(
+    step: .mockStepLessThan10000Steps,
+    dailyGoal: .mockDailyGoal
+  )
+  .padding()
+  .backgroundColor(.dailyStepsBlue)
+}
+
+#Preview(traits: .sizeThatFitsLayout) {
+  StepBar(
+    step: .mockStepMoreThan10000Steps,
+    dailyGoal: .mockDailyGoal
+  )
+  .padding()
+  .backgroundColor(.dailyStepsBlue)
 }

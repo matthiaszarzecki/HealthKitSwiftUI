@@ -63,13 +63,11 @@ struct AllStepsDisplay: View {
   }
 }
 
-struct AllStepsView_Previews: PreviewProvider {
-  static var previews: some View {
-    AllStepsDisplay(
-      steps: .mockSteps,
-      refreshStepReadout: {},
-      saveGoal: {_ in },
-      dailyGoal: .mockDailyGoal
-    )
-  }
+#Preview(traits: .sizeThatFitsLayout) {
+  AllStepsDisplay(
+    steps: .mockSteps,
+    refreshStepReadout: {},
+    saveGoal: {_ in },
+    dailyGoal: .mockDailyGoal
+  )
 }

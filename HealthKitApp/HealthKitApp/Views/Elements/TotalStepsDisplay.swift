@@ -25,13 +25,10 @@ struct TotalStepsDisplay: View {
   }
 }
 
-struct TotalStepsDisplay_Previews: PreviewProvider {
-  static var previews: some View {
-    TotalStepsDisplay(
-      steps: .mockSteps,
-      width: .previewWidth
-    )
-    .padding()
-    .previewLayout(.sizeThatFits)
-  }
+#Preview(traits: .sizeThatFitsLayout) {
+  TotalStepsDisplay(
+    steps: .mockSteps,
+    width: .previewWidth
+  )
+  .padding()
 }

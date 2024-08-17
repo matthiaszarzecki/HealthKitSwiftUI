@@ -13,8 +13,9 @@ class AllStepsViewModel: ObservableObject {
   @Published private(set) var state = AllStepsViewState()
   private var healthStore: HealthStore?
   
-  @AppStorage("daily_goal") private var savedGoal: Int = 7000
-  
+  @AppStorage("daily_goal")
+  private var savedGoal: Int = 7000
+
   init() {
     healthStore = HealthStore()
     loadData()

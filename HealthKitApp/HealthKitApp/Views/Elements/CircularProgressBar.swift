@@ -36,14 +36,11 @@ struct CircularProgressBar: View {
   }
 }
 
-struct CircularProgressBar_Previews: PreviewProvider {
-  static var previews: some View {
-    CircularProgressBar(
-      progress: 0.23,
-      size: 100
-    )
-    .padding()
-    .backgroundColor(.green)
-    .previewLayout(.sizeThatFits)
-  }
+#Preview(traits: .sizeThatFitsLayout) {
+  CircularProgressBar(
+    progress: 0.23,
+    size: 100
+  )
+  .padding()
+  .backgroundColor(.green)
 }
