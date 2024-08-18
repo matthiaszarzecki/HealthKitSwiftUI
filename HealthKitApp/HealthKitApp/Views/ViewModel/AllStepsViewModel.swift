@@ -11,8 +11,9 @@ import SwiftUI
 
 class AllStepsViewModel: ObservableObject {
   @Published private(set) var state = AllStepsViewState()
-  private var healthStore: HealthStore?
   
+  private var healthStore: HealthStore?
+
   @AppStorage("daily_goal")
   private var savedGoal: Int = 7000
 

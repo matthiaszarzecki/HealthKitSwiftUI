@@ -53,8 +53,7 @@ class HealthStore {
       completion(statisticsCollection)
     }
     
-    if let healthStore = healthStore,
-       let query = self.query {
+    if let healthStore = healthStore, let query = query {
       healthStore.execute(query)
     }
   }
