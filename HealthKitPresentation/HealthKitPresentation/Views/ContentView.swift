@@ -8,6 +8,9 @@
 import HealthKit
 import SwiftUI
 
+// Info Plist
+// HealthKit Capabilities
+
 struct ContentView: View {
   @ObservedObject private var allStepsViewModel = AllStepsViewModel()
 
