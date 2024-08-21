@@ -7,6 +7,12 @@
 
 import SwiftUI
 
+struct Step: Identifiable {
+  let id = UUID()
+  let count: Int
+  let date: Date
+}
+
 struct ContentView: View {
   @State var steps: [Step] = []
 
@@ -32,12 +38,6 @@ struct ContentView: View {
     }
     .padding()
   }
-}
-
-struct Step: Identifiable {
-  let id = UUID()
-  let count: Int
-  let date: Date
 }
 
 #Preview {
