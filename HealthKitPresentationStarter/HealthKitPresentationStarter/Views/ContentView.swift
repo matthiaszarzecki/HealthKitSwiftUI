@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-  @ObservedObject private var allStepsViewModel = AllStepsViewModel()
+  @State var steps: [Step] = []
 
   var body: some View {
     VStack {
@@ -17,11 +17,10 @@ struct ContentView: View {
           .imageScale(.large)
           .foregroundStyle(Color.red)
 
-
-        Text("StepData: \(allStepsViewModel.steps)")
+        Text("StepData: \(steps)")
 
         Button(
-          action: allStepsViewModel.loadData,
+          action: loadData,
           label: {
             Text("Get Health Data")
           }
@@ -31,20 +30,16 @@ struct ContentView: View {
     }
     .padding()
   }
+
+  private func loadData() {
+
+  }
 }
 
 struct Step: Identifiable {
   let id = UUID()
   let count: Int
   let date: Date
-}
-
-class AllStepsViewModel: ObservableObject {
-  @Published private(set) var steps: [Step] = []
-
-  func loadData() {
-
-  }
 }
 
 #Preview {
